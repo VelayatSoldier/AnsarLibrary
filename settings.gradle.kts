@@ -9,9 +9,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
-        maven{
-            setUrl("https://jitpack.io")
-            credentials { username = "jp_smmimeejq57smiu7kflrpv5i2d" }}
+        maven{ setUrl("https://jitpack.io") }
     }
 }
 dependencyResolutionManagement {
@@ -21,7 +19,6 @@ dependencyResolutionManagement {
         mavenCentral()
         maven{
             setUrl("https://jitpack.io")
-            credentials { username = "jp_smmimeejq57smiu7kflrpv5i2d" }
         }
     }
 }
