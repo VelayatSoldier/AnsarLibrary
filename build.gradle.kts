@@ -1,13 +1,4 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    val agp_version by extra("8.5.2")
-    repositories {
-        google()
-        mavenCentral()
-        maven{ setUrl("https://jitpack.io") }
-    }
-}
-
 
 plugins {
     alias(libs.plugins.android.application) apply false
