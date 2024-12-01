@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-
+    id("maven-publish")
 }
 
 android {
@@ -37,6 +37,15 @@ android {
 
 }
 
+publishing{
+    publications{
+        register<MavenPublication>("release")
+        afterEvaluate{
+
+        }
+    }
+}
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -47,15 +56,4 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-   /* implementation(libs.material)
-    implementation(libs.gson)
-
-    implementation(libs.lottie)
-    implementation(libs.gravitysnaphelper)
-    implementation(libs.blurimageview)
-
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.ktx)
-    implementation(libs.androidx.activity.ktx)
-    ksp(libs.androidx.room.compiler)*/
 }
