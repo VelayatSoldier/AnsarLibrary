@@ -1,6 +1,6 @@
 [versions]
-activityKtx = "1.9.1"
-agp = "8.5.1"
+activityKtx = "1.9.3"
+agp = "8.5.2"
 blurimageview = "1.0.1"
 gravitysnaphelper = "2.2.2"
 gson = "2.11.0"
@@ -13,7 +13,7 @@ appcompat = "1.7.0"
 lottie = "3.4.0"
 material = "1.12.0"
 activity = "1.9.3"
-constraintlayout = "2.1.4"
+constraintlayout = "2.2.0"
 roomRuntime = "2.6.1"
 
 [libraries]

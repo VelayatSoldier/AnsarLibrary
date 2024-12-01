@@ -1,8 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("com.google.devtools.ksp")
-    id("maven-publish")
+
 }
 
 android {
@@ -32,9 +31,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    dataBinding {
-        enable = true
-    }
 }
 
 dependencies {
@@ -46,7 +42,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(libs.material)
+   /* implementation(libs.material)
     implementation(libs.gson)
 
     implementation(libs.lottie)
@@ -56,5 +52,5 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.activity.ktx)
-    ksp(libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)*/
 }
