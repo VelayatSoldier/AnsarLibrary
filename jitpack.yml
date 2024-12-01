@@ -1,2 +1,4 @@
 jdk:
-  -openjdk8
+  - openjdk17
+  - sdk install java 17.0.11-open
+  - sdk use java 17.0.11-open

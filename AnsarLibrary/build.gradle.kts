@@ -1,12 +1,13 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-
+    id("com.google.devtools.ksp")
+    id("maven-publish")
 }
 
 android {
     namespace = "ir.ansar.library"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24
@@ -33,6 +34,15 @@ android {
     }
 }
 
+publishing{
+    publications{
+        register<MavenPublication>("release")
+        afterEvaluate{
+
+        }
+    }
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -42,7 +52,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-   /* implementation(libs.material)
+    implementation(libs.material)
     implementation(libs.gson)
 
     implementation(libs.lottie)
@@ -52,5 +62,5 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.activity.ktx)
-    ksp(libs.androidx.room.compiler)*/
+    ksp(libs.androidx.room.compiler)
 }

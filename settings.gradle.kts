@@ -25,4 +25,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Ansar"
 include(":app")
-/*include(":AnsarLibrary")*/
+include(":AnsarLibrary")
