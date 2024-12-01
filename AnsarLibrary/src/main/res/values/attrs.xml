@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Theme">
+        <attr name="colorSurface" format="color"/>
+        <attr name="colorSurfaceContainer" format="color"/>
+        <attr name="colorSurfaceContainer2" format="color"/>
+        <attr name="colorOnSurface" format="color"/>
+        <attr name="colorOnSurfaceVariant" format="color"/>
+        <attr name="colorInactivePlan" format="color"/>
+        <attr name="colorSurfaceDivider" format="color"/>
+        <attr name="colorContainerDivider" format="color"/>
+        <attr name="colorInactiveContainerDivider" format="color"/>
+        <attr name="colorSurfaceDialog" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="CalendarView">
+        <attr name="text_color_variant" format="color"/>
+    </declare-styleable>
+
+</resources>

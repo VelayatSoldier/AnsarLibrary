@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="theme"
+            type="ir.ansar.library.utils.ThemeUtils" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@{theme.colorSurface.intValue()}">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/dayNightSwitch"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewTodayPlanTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewTodayPlanTitle"
+                app:lottie_rawRes="@raw/data" />
+
+            <ImageView
+                android:id="@+id/imgMessage"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="32dp"
+                android:padding="3dp"
+                android:layout_marginTop="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/night_message_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewTodayPlanTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewTodayPlanTitle" />
+
+            <TextView
+                android:id="@+id/textViewTodayPlanTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/vazir_medium"
+                android:text="برنامه امروز"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                android:textColor="@{theme.colorOnSurface.intValue()}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewTodayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/vazir_medium"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:textColor="@{theme.colorOnSurfaceVariant.intValue()}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTodayPlanTitle"
+                tools:text="یکشنبه 23 مهر 1402" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMain"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:layoutDirection="rtl"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTodayDate" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewNoPlanExist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/vazir_medium"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="برنامه‌ای برای امروز تعریف نکردی."
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@{theme.colorOnSurface.intValue()}" />
+
+                <TextView
+                    android:id="@+id/textViewNoPlanExistDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/vazir_regular"
+                    android:paddingStart="32dp"
+                    android:gravity="center"
+                    android:paddingEnd="32dp"
+                    android:text="برای ایجاد برنامه جدید برای امروز روی آیکن خانه نگه‌دار و یا برای روزهای دیگر به صفحه مدیریت برنامه‌ها برو."
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@{theme.colorOnSurfaceVariant.intValue()}" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
