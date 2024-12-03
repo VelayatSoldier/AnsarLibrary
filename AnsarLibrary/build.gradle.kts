@@ -38,7 +38,7 @@ publishing {
         register<MavenPublication>("release"){
             groupId = "com.ansar"
             artifactId = "AnsarLibrary"
-            version = "2.0"
+            version = "2.0.1"
 
             afterEvaluate {
                from(components["release"])
