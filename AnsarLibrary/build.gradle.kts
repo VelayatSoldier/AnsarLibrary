@@ -33,11 +33,16 @@ android {
     }
 }
 
-publishing{
-    publications{
-        register<MavenPublication>("release")
-        afterEvaluate{
+publishing {
+    publications {
+        register<MavenPublication>("release"){
+            groupId = "com.ansar"
+            artifactId = "AnsarLibrary"
+            version = "2.0"
 
+            afterEvaluate {
+               from(components["release"])
+            }
         }
     }
 }

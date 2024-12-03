@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("maven-publish")
 }
 
 android {
@@ -37,14 +36,6 @@ android {
 
 }
 
-publishing{
-    publications{
-        register<MavenPublication>("release")
-        afterEvaluate{
-
-        }
-    }
-}
 
 dependencies {
     implementation(libs.androidx.core.ktx)
